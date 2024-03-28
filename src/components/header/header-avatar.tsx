@@ -18,7 +18,7 @@ interface HeaderAvatarProps {
 }
 
 export const HeaderAvatar: React.FC<HeaderAvatarProps> = ({ publicKey }) => {
-  const { disconnect } = useWallet();
+  const wallet = useWallet();
 
   const handleCopyPublicKey = async () => {
     await copyToClipboard(publicKey);
@@ -50,7 +50,10 @@ export const HeaderAvatar: React.FC<HeaderAvatarProps> = ({ publicKey }) => {
           </Button>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="text-red-500" onClick={() => disconnect()}>
+        <DropdownMenuItem
+          className="text-red-500"
+          onClick={() => wallet.disconnect()}
+        >
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>

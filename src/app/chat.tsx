@@ -34,7 +34,9 @@ export default function Chat() {
       });
     }
 
-    refetch();
+    refetch().catch((e) => {
+      console.error(e);
+    });
   }, [messages, isLoading]);
 
   return (

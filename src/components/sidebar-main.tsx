@@ -14,7 +14,7 @@ interface SidebarMainProps {
 }
 
 export const SidebarMain = ({ chats }: SidebarMainProps) => {
-  const { push } = useRouter();
+  const router = useRouter();
   const [search, setSearch] = useState("");
 
   return (
@@ -28,7 +28,7 @@ export const SidebarMain = ({ chats }: SidebarMainProps) => {
           <Button
             variant="outline"
             className="flex w-full gap-2"
-            onClick={() => push("/")}
+            onClick={() => router.push("/")}
           >
             <Plus className="h-4 w-4" />
             New Chat
@@ -41,10 +41,11 @@ export const SidebarMain = ({ chats }: SidebarMainProps) => {
           {chats?.map((chat) => {
             return (
               <SidebarItem
+                key={chat.chatId}
                 active={true}
                 title={chat.chatId}
                 icon="chat"
-                onClick={() => push("/c/" + chat.chatId)}
+                onClick={() => router.push("/c/" + chat.chatId)}
               />
             );
           })}
