@@ -3,7 +3,6 @@
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useChat } from "ai/react";
 import React, { useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import { ChatContainer, ChatInput } from "@/components/chat";
 import { ChatMessage } from "@/components/chat/chat-message";
@@ -41,7 +40,7 @@ export default function Chat({ params }: { params: { id: string } }) {
   }, [messages, isLoading]);
 
   useEffect(() => {
-    if (chat && chat.messages && chat.messages.length > 0) {
+    if (!!chat && chat.messages && chat.messages.length > 0) {
       setMessages(
         chat.messages.map((m) => ({
           ...m,
