@@ -1,7 +1,7 @@
 import { DynamicStructuredTool } from "@langchain/core/tools";
 import { z } from "zod";
 
-import { DAS } from "helius-sdk";
+import type { DAS } from "helius-sdk";
 import { helius } from "@/lib/helius";
 
 const sortBySchema = z
