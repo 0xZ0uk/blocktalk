@@ -58,6 +58,7 @@ export const SidebarPrimary: React.FC<SidebarPrimaryProps> = ({}) => {
           <>
             {nav.primary.map(({ path, icon, label }) => (
               <div
+                key={path}
                 className={cn(
                   "w-full",
                   isActive(path)
@@ -92,6 +93,7 @@ export const SidebarPrimary: React.FC<SidebarPrimaryProps> = ({}) => {
           <>
             {nav.secondary.map(({ path, icon, label }) => (
               <div
+                key={path}
                 className={cn(
                   "w-full",
                   isActive(path)
