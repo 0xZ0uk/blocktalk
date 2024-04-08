@@ -1,29 +1,25 @@
-# Create T3 App
+# BlockTalk
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+An AI-powered blockchain explorer, that let's you interact, learn, and talk with the Solana blockchain.
 
-## What's next? How do I make an app with this?
+## About
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+**The advent of AI, has started to change the way we seek and consume information.** Platforms like ChatGPT, Claude and Gemini make it easier than ever to search, summarize and even explain any topic or subject.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Using them you can chat with articles, videos, PDFs, etc. But there isn't a way to talk to the Blockchain directly... until now.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+BlockTalk was built for the Solana Renaissance Hackathon.
 
-## Learn More
+## Quickstart
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+To get started, copy the `.env.example` to `.env` and input your own variables, or visit [BlockTalk Demo](https://blocktalk-demo.vercel.app/).
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+**DISCLAIMER:** The demo is hosted on Vercel with a free account, meaning requests will timeout after 20 seconds without an answer, LLM responses may take more 20 seconds to generate. For the best experience, run the repository locally with your own environment variables.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Roadmap/Future Plans
 
-## How do I deploy this?
+BlockTalk is still in it's early stages, it works has a proof of concept of teaching an LLM how to use and interact with a blockchain. However is still missing many features, in future iterations we intend in adding:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- More blockchains
+- More tools and advanced interactions (e.g: Swaps in chat, cross-referencing).
+- Better UI
